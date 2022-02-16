@@ -2,26 +2,30 @@
 #include "Server.h"
 using namespace std;
 
-Server::Server()
+Server::Server() 
 {
-    a = 0;
-    b = 0;
-}
-
-Server::Server(int a_p, int b_p)
-{
-    a = a_p;
-    b = b_p;
-}
+    a = 1;
+    b = 1;
+};
 
 Server::~Server() {};
 
-int Server::Func()
+void Server::Func1()
 {
-    return a + b;
+    std::cout << "Func1" << std::endl;
 }
 
-int Server::Func2()
+void Server::Func2()
 {
-    return ((a + b)*22);
+    std::cout << "Func2" << std::endl;
+}
+
+void Server::Func3()
+{
+    std::cout << "Func3" << std::endl;
+}
+
+void Server::Func4()
+{
+    std::cout << "Func4" << std::endl;
 }

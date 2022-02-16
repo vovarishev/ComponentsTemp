@@ -1,4 +1,5 @@
 call Path.bat
 
-g++ Server.cpp IServer.cpp IServer2.cpp Main.cpp -c
+g++ Server.cpp IManager.cpp Main.cpp -c
+echo Compiled sucsessfull!
 PAUSE

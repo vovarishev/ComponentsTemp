@@ -1,8 +1,8 @@
 #ifndef ISERVER2_H
 #define ISERVER2_H
-class IServer2
+struct I2
 {
-public:
-    virtual int Func2() = 0;
+    virtual void Func3() = 0;
+    virtual void Func4() = 0;
 };
 #endif

@@ -1,7 +1,7 @@
-#include "Server.h"
+#include "IManager.h"
 using namespace std;
 
-IServer* CreateInstance()
+Server* CreateInstance()
 {
     return new Server();
 }

@@ -1,17 +1,14 @@
 #include <iostream>
 #include <stdlib.h>
-#include "IServer.h"
-#include "IServer2.h"
-//using namespace std;
+#include "IManager.h"
 
 int main()
 {
-    IServer* S = CreateInstance();
-    IServer2* S2 = (IServer2*)S;
-    std::cout << S->Func()<< std::endl;
-    std::cout << S2->Func2()<< std::endl;
-    delete S;
-    delete S2;
-    delete S3;
+    Server* pS = CreateInstance();
+    pS->Func3();
+    I1* pI1 = (I1*)pS;
+    pI1->Func1();
+    I2* pI2 = (I2*)pI1;
+    pI2->Func3();
     system("pause");
 }

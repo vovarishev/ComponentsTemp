@@ -16,12 +16,7 @@ Server::Server(int a_p, int b_p)
 
 Server::~Server() {};
 
-int Server::Func()
-{
-    return a + b;
-}
-
 int Server::Func2()
 {
-    return ((a + b)*22);
+    return ((a + b)*222);
 }

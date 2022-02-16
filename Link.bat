@@ -1,4 +1,4 @@
 call Path.bat
 
-g++ Server.o IServer.o Main.o -o run.exe -static-libstdc++ -static-libgcc
+g++ Server.o IServer.o IServer2.o Main.o -o run.exe 
 PAUSE

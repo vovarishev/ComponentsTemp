@@ -1,14 +1,22 @@
 #include <iostream>
 #include <stdlib.h>
 #include "IManager.h"
+using namespace std;
 
 int main()
 {
-    Server* pS = CreateInstance();
-    pS->Func3();
-    I1* pI1 = (I1*)pS;
-    pI1->Func1();
-    I2* pI2 = (I2*)pI1;
-    pI2->Func3();
+    IUnk* pIUnk = CreateInstance(1);
+
+    IX* pIX = NULL;
+    if(pIUnk->QueryInterface(1,(void**)&pIX)!=0)
+    {
+        cout<<"Warning"<<endl;
+        system("pause");
+        return 0;
+    }
+        pIX->Func1();
+
+
     system("pause");
+    return 0;
 }

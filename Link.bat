@@ -1,5 +1,5 @@
 call Path.bat
 
-g++ Server.o IManager.o Main.o -o run.exe -static-libstdc++ -static-libgcc
-echo Linked sucsessfull!
+g++ IUnk.o Server.o Server2.o IManager.o Main.o -o run.exe -static-libstdc++ -static-libgcc
+echo Linked
 PAUSE

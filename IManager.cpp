@@ -2,16 +2,17 @@
 #include "IManager.h"
 using namespace std;
 
-IUnk* CreateInstance(int SID) 
+int CreateInstance(int clsid, int iid, void** ppv) 
 {
+    int hp = 1;
     IUnk* pI = NULL;
-    switch (SID){
+    switch (clsid){
         case 1:
-            cout<<"CreateInstance: Linked Server."<<endl;
+            cout<<"CreateInstance: Linked Server1."<<endl;
             pI = (IX*) new Server;
             break;
         case 2:
-            cout<<"CreateInstance: Lined Server2."<<endl;
+            cout<<"CreateInstance: Linked Server2."<<endl;
             pI = (IY*) new Server2;
             break;
         default:
@@ -19,5 +20,6 @@ IUnk* CreateInstance(int SID)
             pI = (IX*) new Server;
             break;
     }
-    return pI;
+    hp = pI->QueryInterface(iid,ppv);
+    return hp;
 }

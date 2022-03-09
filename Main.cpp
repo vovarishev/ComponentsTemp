@@ -5,10 +5,12 @@ using namespace std;
 
 int main()
 {
-    IUnk* pIUnk = CreateInstance(1);
+    HRESULT_ hp = 1;
 
     IX* pIX = NULL;
-    if(pIUnk->QueryInterface(1,(void**)&pIX)!=0)
+    hp = CreateInstance(CLSID_Server1,IID_IServer1,(void**) &pIX);
+
+    if(hp!=0)
     {
         cout<<"Warning"<<endl;
         system("pause");

@@ -3,5 +3,6 @@
 #include "IUnk.h"
 #include "Server.h"
 #include "Server2.h"
-IUnk* CreateInstance(int);
+#include "OBJBASE.h"
+int CreateInstance(int clsid, int iid, void** ppv);
 #endif

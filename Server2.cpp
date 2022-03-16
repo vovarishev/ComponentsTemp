@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+#include "CONST.h"
 #include "Server2.h"
 using namespace std;
 
@@ -32,7 +33,7 @@ int Server2::QueryInterface(int IID,void** ppv){
         default:
             cout<<"QueryInterface: Интерфейс не поддерживается"<<endl;
             *ppv = NULL;
-            return 1;
+            return S_FAIL_;
     }
-    return 0;
+    return S_OK_;
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+#include "CONST.h"
 #include "Server.h"
 using namespace std;
 
@@ -43,7 +44,7 @@ int Server::QueryInterface(int iid,void** ppv){
         default:
             cout<<"QueryInterface: Invalid interface"<<endl;
             *ppv = NULL;
-            return 1;
+            return S_FAIL_;
     }
-    return 0;
+    return S_OK_;
 }

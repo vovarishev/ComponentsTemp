@@ -6,6 +6,9 @@ using namespace std;
 int main(){
     HRESULT_ hp = S_FAIL_;
 
+    I1* pI1 = NULL;
+    hp = CreateInstance(CLSID_Server1,IID_I1,(void**) &pI1);
+/*
     S1Factory* pF = NULL;
     hp = GetClassObject(CLSID_Server1,IID_S1Factory,(void**) &pF);
 
@@ -17,7 +20,13 @@ int main(){
             pI1->Func1();
         }
     }
+*/
 
+    if(hp==S_OK_){
+        pI1->Func1();
+    }
+
+    pI1->Release();
     system("pause");
     return 0;
 }
